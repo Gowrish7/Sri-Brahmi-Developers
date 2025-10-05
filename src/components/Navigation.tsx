@@ -39,7 +39,7 @@ const Navigation = () => {
             <img
               src={logo}
               alt="Sri Brahmi Developers"
-              className="w-auto max-w-[500px] h-[80px] md:h-[160px] mt-1 md:mt-4"
+              className="w-auto max-w-[500px] h-[110px] md:h-[160px] mt-2 md:mt-4"
             />
           </Link>
 
