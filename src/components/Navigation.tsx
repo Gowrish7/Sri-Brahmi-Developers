@@ -28,7 +28,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-1 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0.75 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-card/95 backdrop-blur-sm shadow-soft" : "bg-transparent"
       }`}
     >
@@ -39,7 +39,7 @@ const Navigation = () => {
             <img
               src={logo}
               alt="Sri Brahmi Developers"
-              className="w-auto max-w-[500px] h-[110px] md:h-[160px] mt-2 md:mt-4"
+              className="w-auto max-w-[500px] h-[110px] md:h-[160px] mt-4 md:mt-4"
             />
           </Link>
 
