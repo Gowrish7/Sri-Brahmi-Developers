@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png"; // adjust path if needed
+import logo from "@/assets/logo.png"; // Adjust if needed
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,18 +28,18 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-1 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-card/95 backdrop-blur-sm shadow-soft" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-[100px] md:h-[120px]">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 justify-start">
             <img
               src={logo}
               alt="Sri Brahmi Developers"
-              className="w-auto max-w-[500px] h-[110px] md:h-[160px] mt-1 md:mt-4"
+              className="w-auto max-w-[500px] h-[110px] md:h-[160px] mt-2 md:mt-4"
             />
           </Link>
 
@@ -101,7 +101,7 @@ const Navigation = () => {
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={2} /> : <Menu size={24} />}
           </button>
         </div>
 
