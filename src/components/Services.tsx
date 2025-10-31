@@ -1,26 +1,50 @@
-import { Lightbulb, Home, PaintBucket, Sofa } from "lucide-react";
+import {
+  Lightbulb,
+  Home,
+  PaintBucket,
+  Sofa,
+  Shapes,
+  Hammer,
+  PackageCheck,
+} from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const services = [
   {
     icon: Home,
     title: "Residential Design",
-    description: "Transform your home into a personalized sanctuary with our comprehensive residential design services.",
+    description: "Elegant, functional homes designed for comfort and beauty.",
   },
   {
     icon: Lightbulb,
-    title: "Space Planning",
-    description: "Optimize your space with intelligent layouts that enhance flow and functionality.",
+    title: "Commercial Spaces",
+    description:
+      "Smart, modern solutions that enhance productivity and brand image.",
   },
   {
     icon: PaintBucket,
-    title: "Color Consultation",
-    description: "Expert guidance on color palettes that reflect your style and create the perfect ambiance.",
+    title: "Interior Design",
+    description: "Tailored designs that reflect your style and needs.",
+  },
+  {
+    icon: Hammer,
+    title: "Renovation & Remodeling",
+    description: "Refresh and upgrade your space with innovative ideas.",
+  },
+  {
+    icon: Shapes,
+    title: "3D Remodeling & Visualization",
+    description: "Realistic previews of your project with innovative ideas.",
   },
   {
     icon: Sofa,
-    title: "Furniture Selection",
-    description: "Curated furniture pieces that combine comfort, style, and quality craftsmanship.",
+    title: "Custom Furniture & Decor",
+    description: "Unique pieces crafted to complement your interiors.",
+  },
+  {
+    icon: PackageCheck,
+    title: "TurnKey Projects",
+    description: "End-to-End solutions, from design to execution.",
   },
 ];
 
