@@ -1,5 +1,7 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { ArrowLeft } from "lucide-react";
+import emblem from "@/assets/logo-emblem.png";
 
 const NotFound = () => {
   const location = useLocation();
@@ -9,13 +11,35 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-gray-600">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 underline hover:text-blue-700">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-hero px-6">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-40 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"
+      />
+
+      <div className="relative text-center">
+        <img
+          src={emblem}
+          alt=""
+          aria-hidden="true"
+          className="mx-auto mb-8 h-16 w-auto object-contain"
+        />
+
+        <p className="font-display text-[6rem] md:text-[8rem] font-semibold leading-none gold-text">
+          404
+        </p>
+
+        <p className="mt-2 mb-8 text-xl text-muted-foreground">
+          Oops! Page not found
+        </p>
+
+        <Link
+          to="/"
+          className="group inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background transition-colors hover:bg-gold-ink"
+        >
+          <ArrowLeft className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1" />
           Return to Home
-        </a>
+        </Link>
       </div>
     </div>
   );

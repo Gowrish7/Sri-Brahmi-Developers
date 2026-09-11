@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ["Fraunces", "ui-serif", "Georgia", "serif"],
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,19 +51,31 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        /* Extended — same hue family as the accent/ink above */
+        "gold-ink": "hsl(var(--gold-ink))",
+        "ink-deep": "hsl(var(--ink-deep))",
+        "ink-soft": "hsl(var(--ink-soft))",
+        sand: "hsl(var(--sand))",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        "2xl": "calc(var(--radius) + 6px)",
+        "3xl": "calc(var(--radius) + 14px)",
       },
       boxShadow: {
         soft: "var(--shadow-soft)",
         hover: "var(--shadow-hover)",
+        "gold-glow": "var(--shadow-gold-glow)",
       },
       backgroundImage: {
         "gradient-gold": "var(--gradient-gold)",
         "gradient-hero": "var(--gradient-hero)",
+        "gradient-sheen": "var(--gradient-sheen)",
+      },
+      transitionTimingFunction: {
+        "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",
       },
       keyframes: {
         "accordion-down": {
@@ -94,6 +110,15 @@ export default {
           "0%": { opacity: "0", transform: "translateX(50px)" },
           "100%": { opacity: "1", transform: "translateX(0)" },
         },
+        /* Track is rendered twice, so -50% is one seamless lap */
+        "marquee": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+        "slow-zoom": {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.08)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -104,6 +129,8 @@ export default {
         "float-slow": "float-slow 8s ease-in-out infinite",
         "slide-in-left": "slide-in-left 1.2s ease-out",
         "slide-in-right": "slide-in-right 1.2s ease-out",
+        "marquee": "marquee 64s linear infinite",
+        "slow-zoom": "slow-zoom 18s ease-out forwards",
       },
     },
   },
